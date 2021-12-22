@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="sample.Controller"
+            >
+
+    <top  >
+        <Label BorderPane.alignment="center">Welcome to my app</Label>
+    </top>
+    <bottom>
+        <HBox   spacing="35">
+        <Button prefWidth="80">Add</Button>
+        <Button prefWidth="80">Remove</Button>
+        <Button prefWidth="80">Delete</Button>
+          <padding>
+              <Insets bottom="10" right="10" left="10"/>
+          </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

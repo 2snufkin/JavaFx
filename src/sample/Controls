@@ -1,0 +1,71 @@
+TYPES
+Button, Label, RadioButton, CheckBox, ToggleButton
+very control is a java class the extends another class and implement interfaces (Like Skinnable)
+by creating a class the extends the control class, and overriding the methods, I can adjust the control behavior (advanced topic)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*RadioButton*
+the user can select one choice among many
+the elements need to be grouped together otherwise the will be independent from one another. So I must group them
+group them: with <ToggleGroup>. toggle group is not a Node descendant (see in the introduction what to do)
+
+grouping the Radiobuttons{
+<fx:define>
+<ToggleGroup fx:id="groupname"/> //the id will be used to link the radioButtons
+<RadioButton toggleGroup="$groupname"> // when refering to fx:id -> $ must be used before the id
+<RadioButton toggleGroup="$groupname">...
+</fr:define>
+}
+
+define a default selection{
+<RadioButton toggleGroup="$groupname" selected="true">...
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*CheckBox*
+the user can chack options with a V
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*ToggleButton*
+A button that when clicked is stay down and when re-click moves up
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*TextField*
+use for input 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*PasswordField*
+use for passwords. You can't copy and paste into a PasswordField
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Combobox*
+It looks like an input field with a dropdown menu. When having a lot of options use combobox and not Radiobuttons (think
+of a list of all the countries)
+
+
+
+
+
+Behaviors
+Text: by default it doesn't wrap
+
+
+
+
+adding icon to a controller{
+<ControllerName>
+<graphic>
+<Image View>
+<Image url="">
+</Image View>
+<graphic>
+</ControllerName>
+}
+
+change the text color{
+<ControllerName textFill="color">
+}
+
+change the font and size{
+<font>
+<Font name="" size="">
+</font>
+}
+
+wrap the text when the window size is too small{
+<ControllerName wrapText="true">
+}

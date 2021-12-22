@@ -1,0 +1,22 @@
+Since Java 1.8 it doesn't include so I need to download JavaFX and configure it as global library and write a config
+file for more details - see the first 2 lectures for more information
+
+*Structure: MVC*
+Model: The application data model
+View: Fxml
+Controller: the code that determines what happens when the user interacts with the UI
+1 Stage => multiple scenes => scene graph => Node (UI Control)
+analogy of a play. the curtain rises and the play start. I watch the first scene, the scene ends and the curtain falls
+the is some preparation for the next scene. The scene change ( an ew fxml file is loaded) but the stage stays the same.
+change scene: calling Stage.setScene()
+show(): show the UI
+
+*The main class extends Application*
+3 important methods: start(), init(), stop()
+init(): the method that run first when the application is lunched
+start(): the method that run next.Get as an argument the primary stage => top level window
+stop(): when the application is closed. I can do some cleaning staff
+
+*Javafx Coding process*
+I can code a JavaFx App: 1. inside the class, with code   2. inside the fXML file
+the second option is preferred

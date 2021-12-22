@@ -1,0 +1,21 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<!--        gridLinesVisible="true" for debugging-->
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<!--          gridLinesVisible="true"-->
+
+    <!--    without the index they will be stacked-->
+
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" >Text row 0</Button>
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="1"   >Text Button 0.1</Button>
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="2"   >Text Button 0.2</Button>
+    <Button   GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="3"  GridPane.halignment="RIGHT"> Really long button I put it in seperate line</Button>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="0"  >Text Button 2.0</Button>
+    <Button GridPane.rowIndex="2" GridPane.columnIndex="1"  >Text Button 2.1</Button>
+</GridPane>
+

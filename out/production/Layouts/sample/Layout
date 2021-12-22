@@ -1,0 +1,90 @@
+*Layout*
+there are 8: GridPane, HBox, Vbox, BorderPane, FlowPane, AnchorPane, StackedPane, TilePane.
+every layout nest UI controllers
+preferred size: every control computes it preferred size based on its content
+
+*Padding*
+Add Padding {
+<padding>
+<Inset top=10/> // direction=padding
+</padding>
+}
+*Adding Border around controler{
+
+adding border{
+style="-fx-border-color:red ; -fx-border-width: 3 ; -fx-border-style: dashed"
+}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*GridPane*
+Lay its children in flexiable rows and columns. I need to spasicfy index of row and index of colimns otherwise everything will be
+on top of one another.
+row hight: as the tallest control
+column width: as the widest control
+debugging: making the grid visible will help in debugging the
+
+
+specifying the index of a control {
+<Control GridPane.rowIndex="0" GridPane.columnIndex="0" >
+}
+
+make the grid visible{
+<GridPane  gridLinesVisible="true">
+}
+
+aligment of the controlers inside the GridPane {
+<GridPane alignment="center">
+}
+
+creating space between coloumns and rows{
+<GridPane hgap="{{number}}">
+}
+
+creating space between rows{
+<GridPane  vgap="{{number}}">
+}
+
+Span a control on multiple rows {
+<Children GridPane.columnSpan="x"> //x = number of columns
+}
+
+changing the width of a column{
+<columnConstraints>-->
+<ColumnConstraints percentWidth="90.0"></ColumnConstraints> // per column
+ </columnConstraints>-->
+}
+
+Align within a column (like float) {
+<Children GridPane.haligment="RIGHT">
+}
+
+Align within a row
+<Children GridPane.valigment="RIGHT">
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*HBox and Vbox*
+lat its children in a single row (Hbox) or a sigle columns (Vbox). Normally not a standalone layout. Will be nested inside
+another top level layout.
+use: normally for buttons
+
+adding space between children{
+<HBox spacing="10"> </HBox>
+}
+
+changing the width of a Children{
+<Children prefWidth="10">
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*BorderPane*
+One of the commonly used layout for top level windows.
+arrange its control in the following positions: <top> <right> <bottom> <left> <center>
+every position has its preferred width and height. The center is calculated from the space that rest.
+is a position isn't populated - no space is being allocated
+I must nest a control under a certain position, never under BorderPane directly.
+each position can only have one child. So if    I want to put few controllers, I need to nested them under another layout.
+
+positioning a chilld within a borderPane position{
+<Control BorderPane.alignment="center">
+}
